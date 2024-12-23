@@ -1,0 +1,81 @@
+
+/* Màu nền Gradient nhẹ nhàng cho Giáng Sinh */
+body {
+    background: linear-gradient(135deg, #7b1e1e, #3d0f0f);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+svg {
+    width: 90%;
+    height: 90%;
+    visibility: hidden;
+
+}
+
+#endMessage {
+    font-family: 'Pacifico', cursive;
+    /*font-family: 'mountains_of_christmasregular'; */
+    font-size: 1.5rem;
+    text-anchor: middle;
+    text-align: center;
+    fill: #1DB954; /* Xanh lá cây sang trọng */
+    color: #1DB954; /* Xanh lá cây sang trọng */
+    opacity: 0;
+    letter-spacing: 1px;
+    animation: typing 5s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: underline dotted #FFFFFF;
+}
+
+/* Hiệu ứng tuyết rơi */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    color: #fff;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0vh) translateX(0vw) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) translateX(5vw) rotate(360deg);
+    }
+}
